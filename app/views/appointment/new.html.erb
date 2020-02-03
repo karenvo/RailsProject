@@ -1,15 +1,17 @@
 <h1>Ye new appointment</h1>
-<%= form_with scope: :appointment, local: true do |form| %>
+<%= form_for appointment_path do |a| %>
 <p>
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name %>
+    <%= a.label :first_name %>
+    <%= a.text_field :first_name %>
 </p>
 <p>
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name %>
+    <%= a.label :last_name %>
+    <%= a.text_field :last_name %>
 </p>
 <p>
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name %>
+    <%= a.label :first_name %>
+    <%= a.text_field :first_name %>
 </p>
+    <%= a.collection_check_boxes :service_ids, Service.all, :id, :name %>
+    <%= a.submit %>
 <% end %>
