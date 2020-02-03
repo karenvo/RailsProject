@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
     helper_method :current_user
     helper_method :logged_in?
+    helper_method :authorized
     
     def index
     end
@@ -11,6 +12,10 @@ class ApplicationController < ActionController::Base
 
     def logged_in?
         !current_user.nil?  
+    end
+
+    def authorized
+        redirect_to '/welcome' unless logged_in?
     end
 
 end
