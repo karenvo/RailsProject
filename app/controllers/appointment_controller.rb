@@ -1,10 +1,19 @@
 class AppointmentController < ApplicationController
     def index
-        
+        @users = User.all
+        @employees = Employee.all
     end
     
     def new
-        @appointment = Appointment.create(params[:appointment_params])
+        
+    end
+
+    def create
+
+    end
+
+    def show
+        
     end
 
 end

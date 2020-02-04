@@ -13,5 +13,7 @@ service3 = Service.create(name: 'Facial', price: 100.00)
 user1 = User.create(username: 'Annabelle', password: 'lawl')
 user2 = User.create(username: 'Rosalie', password: 'lawl')
 
-employee1 = Employee.create(username: 'lawl', password: 'lawl')
-employee2 = Employee.create(username: 'lawl2', password: 'lawl')
+employee1 = Employee.create(username: 'lawl')
+employee2 = Employee.create(username: 'lawl2')
+
+employee1.service_ids = 1

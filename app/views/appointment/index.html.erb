@@ -1,2 +1,11 @@
 <h1>here ye here ye</h1>
 <p>I guess we list out all the appointments here</p>
+<% @users.each do |u| %>
+<br> <%= u.username %>
+<br> <%= u.appointment_ids %>
+<% end %>
+
+<% @employees.each do |e| %>
+<br> <%= e.username %>
+<br> <%= e.appointment_ids %>
+<% end %>

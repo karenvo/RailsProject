@@ -7,6 +7,9 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+$ = require("jquery")
+require("fullcalendar")
+require("moment")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -15,3 +18,18 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+//= require moment 
+//= require fullcalendar
+
+function eventCalendar() {
+    return $('#calendar').fullCalendar({ });
+};
+function clearCalendar() {
+    $('#calendar').fullCalendar('delete'); 
+    $('#calendar').html('');
+};
+
+$(document).on('turbolinks:load', function(){
+    eventCalendar();  
+});
+$(document).on('turbolinks:before-cache', clearCalendar);

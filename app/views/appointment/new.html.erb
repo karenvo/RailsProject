@@ -1,17 +1,1 @@
 <h1>Ye new appointment</h1>
-<%= form_for appointment_path do |a| %>
-<p>
-    <%= a.label :first_name %>
-    <%= a.text_field :first_name %>
-</p>
-<p>
-    <%= a.label :last_name %>
-    <%= a.text_field :last_name %>
-</p>
-<p>
-    <%= a.label :first_name %>
-    <%= a.text_field :first_name %>
-</p>
-    <%= a.collection_check_boxes :service_ids, Service.all, :id, :name %>
-    <%= a.submit %>
-<% end %>
